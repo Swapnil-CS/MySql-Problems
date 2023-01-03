@@ -1,0 +1,18 @@
+create table dependent
+(
+    Eid varchar(5),
+    Dno varchar(5),
+    Name varchar(30),
+    Dob date,
+    Relationship varchar(15),
+    Gender varchar(12),
+    foreign key(Eid) references employee(Eid) on delete cascade,
+    foreign key(Dno) references department(Dno) on delete cascade
+);
+
+insert into dependent values('E01', 'D02', 'Vijay Agarwal', '2015-12-20', 'Son', 'Male');
+insert into dependent values('E03', 'D02', 'Namrata Jain', '2004-10-25', 'Daughter', 'Female');
+insert into dependent values('E03', 'D02', 'Namita Jain', '2010-07-22', 'Daughter', 'Female');
+insert into dependent values('E07', 'D03', 'Khushi Thakur', '2014-03-15', 'Daughter', 'Female');
+insert into dependent values('E04', 'D01', 'Ajay Sharma', '2017-04-02', 'Son', 'Male');
+insert into dependent values('E08', 'D03', 'Jayanta Bagchi', '2011-07-05', 'Son', 'Male');

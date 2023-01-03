@@ -1,0 +1,13 @@
+create table department
+(
+    Dno varchar(5),
+    Dname varchar(20),
+    Location varchar(20),
+    primary key(Dno)
+);
+
+insert into department values('D01', 'IT', 'Bangalore');
+insert into department values('D02', 'Marketing', 'Mumbai');
+insert into department values('D03', 'Finance', 'Kolkata');
+insert into department values('D04', 'Production', 'Chennai');
+insert into department values('D05', 'Human Resources', 'Delhi');

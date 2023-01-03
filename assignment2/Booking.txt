@@ -1,0 +1,19 @@
+create table booking
+(
+    Bno varchar(5),
+    Rno varchar(5),
+    Gid varchar(5),
+    Date_from date,
+    Date_to date,
+    primary key(Bno),
+    foreign key(Rno) references room(Rno) on delete cascade,
+    foreign key(Gid) references guest(Gid) on delete cascade
+);
+
+insert into booking values('B01', 'R02', 'G05', '2022-08-10', '2022-08-12');
+insert into booking values('B02', 'R04', 'G06', '2022-07-25', '2022-07-28');
+insert into booking values('B03', 'R03', 'G03', '2023-01-02', '2023-08-03');
+insert into booking values('B04', 'R04', 'G06', '2023-01-01', '2023-01-03');
+insert into booking values('B05', 'R06', 'G01', '2023-01-01', '2023-01-02');
+insert into booking values('B06', 'R05', 'G02', '2022-10-05', '2022-10-06');
+insert into booking values('B07', 'R04', 'G04', '2022-09-02', '2022-09-05');

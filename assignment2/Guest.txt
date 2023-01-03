@@ -1,0 +1,15 @@
+create table guest 
+(
+    Gid varchar(5),
+    Name varchar(30),
+    City varchar(20),
+    Phone bigint(10),
+    primary key(Gid)
+);
+
+insert into guest values ('G01', 'Aloke Das', 'Kolkata', 8257468210);
+insert into guest values ('G02', 'Vinay Sharma', 'Mumbai', 8703054648);
+insert into guest values ('G03', 'Sk Maqbul Alam', 'Delhi', 9456012894);
+insert into guest values ('G04', 'Suresh Pandey', 'Mumbai', 6291456804);
+insert into guest values ('G05', 'Jatin Singh', 'Chandigarh', 9546821051);
+insert into guest values ('G06', 'Ranjan Sarkar', 'Kolkata', 8697264784);

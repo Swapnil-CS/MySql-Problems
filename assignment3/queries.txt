@@ -1,0 +1,5 @@
+1. Select E.Ename from Employee E, Dependent D where E.Eid = D.Eid AND E.Gender = 'Female' AND D.Relationship = 'Daughter' and D.Dob >= (NOW() - INTERVAL 18 YEAR);
+
+2. select * from Department D where D.Dno in (select E.Dno from Employee E, Department D where E.Dno=D.Dno and Gender='Male' group by E.Dno having count(*)=(select max(num) from (select count(*) as num from Employee as E, Department as D where E.Dno=D.Dno and Gender='Male' group by E.Dno) X));
+
+3. select Ename, name as DependentName from Department D, Employee E, Dependent Dp where E.Eid=Dp.Eid and D.Dno=E.Dno and Dname='Marketing' and Salary=(select max(Salary) from Employee E, Department D where E.Dno=D.Dno and Dname='Marketing');

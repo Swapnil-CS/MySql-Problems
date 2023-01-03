@@ -1,0 +1,11 @@
+1.
+select sname,address,year from book,student,borrows where student.sid=borrows.sid and book.bid=borrows.bid and subject='RDBMS' and issue_date='2018-02-10';
+
+2.
+select btitle,author,subject,edition from book,borrows where book.bid=borrows.bid and year(issue_date)<>2017;
+
+3. (may work in other versions)
+select btitle from book where bid in (select bid from borrows,student where borrows.sid=student.sid and year=3 group by borrows.bid having count(*)=(select max(count(*)) from borrows,student where borrows.sid=student.sid and year=3 group by borrows.bid));
+
+3.
+select btitle from book where bid in (select bid from borrows,student where borrows.sid=student.sid and year=3 group by bid having count(*) = (select count(*) from borrows,student where borrows.sid=student.sid and year=3 group by borrows.bid order by count(*) desc limit 1));

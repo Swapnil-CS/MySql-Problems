@@ -1,0 +1,19 @@
+create table Student
+(
+	Sid varchar(5),
+	Sname varchar(30),
+	Address varchar(50),
+	Phone bigint(10),
+	year int(1) check(year between 1 and 4),
+	primary key(Sid)
+);
+
+
+
+insert into Student values('S01', 'Ankur Ghosh', 'Naihati, North 24 Parganas', 9856321475, 3);
+insert into Student values('S02', 'Dibyendu Das', 'Sodepur, North 24 Parganas', 9804598756, 2);
+insert into Student values('S03', 'Sandip Singha', 'Ranchi, Jharkhand', 7856314565, 4);
+insert into Student values('S04', 'Swapnil Basu Choudhury', 'Garia, South 24 Parganas', 9433015221, 3);
+insert into Student values('S05', 'Rupam Sen', 'Tollygunge, Kolkata', 9163154333, 1);
+insert into Student values('S06', 'Bishal Halder', 'New Town, North 24 Parganas', 8564723641, 3);
+insert into Student values('S07', 'Pritisha Mukherjee', 'New Garia, South 24 Parganas', 6291145697, 4);

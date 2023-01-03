@@ -1,0 +1,15 @@
+create table room
+(
+    Rno varchar(5),
+    Type varchar(25),
+    Floor varchar(10),
+    Rate int(4),
+    primary key(Rno)
+);
+
+insert into room values('R01', 'Deluxe suite', 'first', 6000);
+insert into room values('R02', 'Drivers dormitory', 'first', 1000);
+insert into room values('R03', 'Studio room', 'first', 3000);
+insert into room values('R04', 'Deluxe suite', 'second', 7000);
+insert into room values('R05', 'Studio room', 'second', 3500);
+insert into room values('R06', 'Single room', 'second', 2500);

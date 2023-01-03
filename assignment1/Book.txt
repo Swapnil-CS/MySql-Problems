@@ -1,0 +1,20 @@
+create table book
+(
+	Bid varchar(5),
+	Btitle varchar(40),
+	Author varchar(20),
+	Subject varchar(20),
+	Edition varchar(5),
+	primary key(Bid)
+);
+
+
+
+insert into book values('B01', 'Let us C', 'Y.Kanetkar', 'C', '2nd');
+insert into book values('B02', 'Core Java', 'R.N.Rao', 'Java', '7th');
+insert into book values('B03', 'Textbook of RDBMS', 'V.H.Bankar', 'RDBMS', '6th');
+insert into book values('B04', 'Think Python', 'A.B.Downey', 'Python', '2nd');
+insert into book values('B05', 'Java Complete Reference', 'Herbert Schildt', 'Java', '11th');
+insert into book values('B06', 'Operating System Concepts', 'P.B.Galvin', 'Operating Systems', '9th');
+insert into book values('B07', 'RDBMS and Oracle', 'S.Ashok Kumar', 'RDBMS', '2nd');
+insert into book values('B08', 'Introduction to Algorithms', 'T.Cormen', 'Algorithms', '3rd');

@@ -1,0 +1,21 @@
+create table employee
+(
+    Eid varchar(5),
+    Ename varchar(30),
+    Dob date,
+    Salary decimal(10, 2),
+    Dno varchar(5),
+    Gender varchar(12),
+    primary key(Eid),
+    foreign key(Dno) references department(Dno) on delete cascade
+);
+
+insert into employee values('E01', 'Nitin Agarwal', '1985-05-12', 65840.54, 'D02', 'Male');
+insert into employee values('E02', 'Rahul Ghosh', '1990-07-18', 56100.62, 'D01', 'Male');
+insert into employee values('E03', 'Sunita Jain', '1981-10-10', 71024.22, 'D02', 'Female');
+insert into employee values('E04', 'Bikash Sharma', '1988-01-05', 64232.50, 'D01', 'Male');
+insert into employee values('E05', 'Suresh Desai', '1989-05-25', 54040.78, 'D04', 'Male');
+insert into employee values('E06', 'Vijaya Singh', '1994-02-20', 52480.11, 'D05', 'Female');
+insert into employee values('E07', 'Devika Thakur', '1986-11-24', 68450.57, 'D03', 'Female');
+insert into employee values('E08', 'Ranjan Bagchi', '1981-04-17', 74841.45, 'D03', 'Male');
+insert into employee values('E09', 'Vinay Yadav', '1990-04-12', 57410.54, 'D04', 'Male');

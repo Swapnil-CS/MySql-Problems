@@ -1,0 +1,5 @@
+1. select Type, avg(Rate) as AvgRate from Room where type <> 'Drivers dormitory' group by Type;
+
+2. select City from guest, booking where guest.Gid=booking.Gid and year(curdate())=year(Date_from) group by city having count(*)=(select max(num) from (select count(*) as num from guest, booking where guest.Gid=booking.Gid and year(curdate())=year(Date_from) group by City)X);
+
+3. select * from guest where Gid in(select guest.Gid from guest, booking, room where guest.Gid=booking.Gid and room.Rno=booking.Rno and type='Deluxe suite' and Floor='second' group by Gid having count(*)>=2);
